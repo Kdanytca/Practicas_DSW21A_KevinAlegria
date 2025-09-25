@@ -1,0 +1,42 @@
+fun main() {
+    var number1 = 4
+    var number2 = 1
+    var operation = "2"
+
+    //Pedimos el ingreso del primer valor
+    println("Ingrese el primer valor: $number1")
+
+    //pedimos el ingreso del segundo valor
+    println("Ingrese el segundo valor: $number2")
+
+    //Preguntamos al usuario el tipo de operacion a realizar
+    println("¿Qué operación desea realizar?")
+    println("Presione 1 para suma +")
+    println("Presione 2 para resta -")
+    println("Presione 3 para multiplicación *")
+    println("Presione 4 para división /")
+    
+    //Le confirmamos al usuarios 
+    println("Udted presiono: $operation")
+
+    // Buscamos el tipo de operacion que selecciono el usuario
+    val result = when (operation) {
+        "1" -> number1 + number2
+        "2" -> number1 - number2
+        "3" -> number1 * number2
+        "4" -> {
+            if (number2 != 0) //valida la que no se pueda dividir por cero 
+            number1 / number2 
+            else {
+                println("Error: división por cero")
+                return
+            }
+        }
+        else -> {
+            println("Operación no válida")
+            return
+        }
+    }
+
+    println("El resultado es: $result") //mostramos el resultados
+}
