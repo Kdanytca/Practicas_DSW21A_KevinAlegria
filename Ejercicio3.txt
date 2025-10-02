@@ -1,0 +1,11 @@
+fun main() {
+    val listaPares: MutableList<Int> = mutableListOf()
+    
+    for(numero in 1..100){
+        if(numero % 2 == 0)
+        listaPares.add(numero)
+        
+    }
+    println("El tamaño de la lista es: ${listaPares.size}")
+    println(listaPares)
+}
